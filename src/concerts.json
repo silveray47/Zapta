@@ -3,7 +3,7 @@
     "id": 1,
     "artist": "The Fish Snake",
     "type": "band",
-    "image": "images/hdn.jpeg",
+    "image": "/images/hdn.jpeg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -25,7 +25,7 @@
   "id": 2,
     "artist": "Yuval Dayan",
     "type": "singer",
-    "image": "images/yd.jpeg",
+    "image": "/images/yd.jpeg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -48,7 +48,7 @@
 
     "artist": "Monika Sex",
     "type": "band",
-    "image": "images/ms.jpg",
+    "image": "/images/ms.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -70,7 +70,7 @@
   "id": 4,
     "artist": "Hava Alberstien",
     "type": "singer",
-    "image": "images/ha.jpg",
+    "image": "/images/ha.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -92,7 +92,7 @@
   "id": 5,
     "artist": "Omer Adam",
     "type": "singer",
-    "image": "images/oa.jpg",
+    "image": "/images/oa.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -114,7 +114,7 @@
   "id": 6,
     "artist": "Raviv Kaner",
     "type": "singer",
-    "image": "images/rk.jpg",
+    "image": "/images/rk.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -136,7 +136,7 @@
   "id": 7,
     "artist": "Yehuda Poliker",
     "type": "singer",
-    "image": "images/yp.jpg",
+    "image": "/images/yp.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -158,7 +158,7 @@
   "id": 8,
     "artist": "Natan Goshen",
     "type": "singer",
-    "image": "images/ng.jpeg",
+    "image": "/images/ng.jpeg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -180,7 +180,7 @@
   "id": 9,
     "artist": "Marina Maximilian Blumin",
     "type": "singer",
-    "image": "images/mmb.jpeg",
+    "image": "/images/mmb.jpeg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -202,7 +202,7 @@
   "id": 10,
     "artist": "Evyatar Banay",
     "type": "singer",
-    "image": "images/eb.jpg",
+    "image": "/images/eb.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -224,7 +224,7 @@
   "id": 11,
     "artist": "Dani Robas",
     "type": "singer",
-    "image": "images/dr.jpg",
+    "image": "/images/dr.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -246,7 +246,7 @@
   "id": 12,
     "artist": "Keren Peles",
     "type": "singer",
-    "image": "images/kp.jpg",
+    "image": "/images/kp.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -268,7 +268,7 @@
   "id": 13,
     "artist": "Rami Klienstein",
     "type": "singer",
-    "image": "images/rkl.jpg",
+    "image": "/images/rkl.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -290,7 +290,7 @@
   "id": 14,
     "artist": "The Prophecy Fools",
     "type": "band",
-    "image": "images/sh.jpg",
+    "image": "/images/sh.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -312,7 +312,7 @@
   "id": 15,
     "artist": "Idan Haviv",
     "type": "singer",
-    "image": "images/ih.jpg",
+    "image": "/images/ih.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -334,7 +334,7 @@
   "id": 16,
     "artist": "Itzik Kala",
     "type": "singer",
-    "image": "images/ik.jpg",
+    "image": "/images/ik.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -356,7 +356,7 @@
   "id": 17,
     "artist": "Aviv Gefen",
     "type": "singer",
-    "image": "images/ag.jpg",
+    "image": "/images/ag.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -378,7 +378,7 @@
   "id": 18,
     "artist": "Gidi Gov",
     "type": "singer",
-    "image": "images/gg.jpeg",
+    "image": "/images/gg.jpeg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -400,7 +400,7 @@
   "id": 19,
     "artist": "Amir Dadon",
     "type": "singer",
-    "image": "images/ad.jpeg",
+    "image": "/images/ad.jpeg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
@@ -422,7 +422,7 @@
   "id": 20,
     "artist": "Red Band",
     "type": "band",
-    "image": "images/rb.jpg",
+    "image": "/images/rb.jpg",
     "crowd_limit": 300,
     "details":{ 
         "door_opens_at": "19:00",
