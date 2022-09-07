@@ -21,27 +21,6 @@ const Login = () => {
 
     return (
         <div>
-             <h1>Come to Zappta ! </h1> <br />
-            
-           <div className="inner">
-            {
-                concertsList && concertsList.map( concert => {
-                return(
-                    <div className="box">
-                        <img src={concert.image}  />
-                        <br />
-
-                        {concert.artist}
-
-    
-                    </div>
-                )
-
-                })
-            }
-           </div>
-
-
             <Formik initialValues={{email:'', password:''}} 
             onSubmit={(values) => {alert ("your values: " + JSON.stringify(values))}}
             validationSchema={schema}
