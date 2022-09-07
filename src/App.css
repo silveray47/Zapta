@@ -3,3 +3,17 @@
   text-align: center;
 }
 
+Header{
+  position:absolute;
+  top:0;
+  left:0;
+
+}
+Navbar{
+  position: sticky;
+}
+
+.navbar-header-container{
+  overflow: hidden;
+}
+

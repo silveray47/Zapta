@@ -2,11 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import LoginSingupContainer from '../LoginSignupContainer/LoginSignupContainer';
 import './navbar.css'
+import smalLogo from '../../static/zapta.png'
 
 export default function Navbar({isChanged}) {
   console.log(isChanged);
   return (
-    <div className={isChanged?'Navbar activ':'Navbar'}>
+    <div className={isChanged?'navbar activ':'navbar'}>
+       {isChanged && <img id='smalLogo' src={smalLogo} alt="gdfgdfgdfg"/>}
       <nav >
         <ul>
           <li>

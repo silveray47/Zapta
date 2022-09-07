@@ -1,9 +1,10 @@
 #header{
     margin: 0;
     width: 100vw;
-    height: 40vh; 
+    height: 55vh; 
     position: relative; 
-    background-color: blanchedalmond;
+    overflow:hidden;
+    
 }
 
 #cards {
@@ -17,5 +18,21 @@
     right: 10px;
     position: absolute;
     display: flex;
+
+}
+
+video {
+    object-fit: cover;
+    position: absolute;
+    width: 100vw;
+    top:0;
+    left: 0%;
+    z-index: -1;
+
+}
+
+#header-logo{
+    width: 40vw;
+    margin:0;
 
 }
