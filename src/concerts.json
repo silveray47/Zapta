@@ -1,0 +1,442 @@
+[
+  {
+    "id": 1,
+    "artist": "Hayehudim",
+    "type": "band",
+    "image": "images/fb.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 2,
+    "artist": "Yuval Dayan",
+    "type": "singer",
+    "image": "images/yd.jpeg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+   "id": 3,
+
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 4,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 5,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 6,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 7,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 8,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 9,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 10,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 11,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 12,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 13,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 14,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 15,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 16,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 17,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 18,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 19,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 20,
+    "artist": "aaaaaaaaaa",
+    "type": "band",
+    "image": "images/aaaaaaaaa.png",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  }
+]

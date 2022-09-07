@@ -1,0 +1,52 @@
+#footer{
+    margin: 0;
+    width: 100vw;
+    height: 30vh; 
+    bottom: 0;
+    position: relative; 
+    background-color: rgb(58, 236, 129);
+}
+
+/* .social-icons{
+    width: 40px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 var(--grey-border);
+    cursor: pointer;
+    border-radius: 50%;
+ } */
+
+.MuiSvgIcon-root {
+   margin: 7px;
+}
+
+ul {
+   list-style-type: none;
+}
+
+.logo {
+   float: left;
+   
+}
+
+#logo {
+   width: 150px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: 60px;
+}
+
+.contact_us {
+   margin-left: 20%;
+   margin-right: 20%;
+   float: left;
+   font-size: smaller;
+   padding-top: 10px;
+   text-align: left;
+}
+
+.social_media {
+   float: left;
+}
+
+
+
