@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import './concert.css'
 import concertsList from '../../concerts.json'
 import {useState} from 'react';
@@ -8,10 +8,12 @@ import Calendar from 'react-calendar';
 import LocationOnTwoToneIcon from '@mui/icons-material/LocationOnTwoTone';
 import MapTwoToneIcon from '@mui/icons-material/MapTwoTone';
 import DoorSlidingTwoToneIcon from '@mui/icons-material/DoorSlidingTwoTone';
+import LocalOfferTwoToneIcon from '@mui/icons-material/LocalOfferTwoTone';
 import {Formik} from "formik"
 import * as Yup from "yup"
 import { useSelector, useDispatch } from "react-redux";
 import { paymentForward, createPayment } from '../paymentDetails'
+import { number } from 'yup/lib/locale';
 
 
 export default function Concert() {
@@ -69,6 +71,12 @@ export default function Concert() {
                   <td><DoorSlidingTwoToneIcon fontSize="large" /></td>
                   <td>Doors open at {concertDetails.door_opens_at}</td>
                 </tr>
+                <tr>
+                  <td><LocalOfferTwoToneIcon fontSize="large" /></td>
+                  <td>Price: {currentConcert.price}</td>
+                </tr>
+
+                
               </tbody>
             </table>
 
@@ -111,7 +119,7 @@ export default function Concert() {
                                 onChange={handleChange}
                                 values={values.amount}
                                 onBlur={handleBlur}>
-                              <option value="0" selected>0</option>
+                              <option value="0" defaultValue={0}>0</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -133,25 +141,16 @@ export default function Concert() {
 
                       </tr>
                       <tr >
-                        <td colspan="4"> {values.amount} tickets to {currentConcert.artist} on {values.date} </td>
-                    
+                        <td colSpan="4"> {values.amount} tickets to {currentConcert.artist} on {values.date}</td> 
                       </tr>
                     </tbody>
                   </table>
-                   
-                    
-                   
-
+                
                     <br /> <br />
 
-                   
-                    
-                    
-
-                    <br /> <br />
-
-                    <button type="submit" onClick={() => dispatch(createPayment(values))}>Add To Cart </button>
-                  
+                    <Link to='/Payment'>
+                    <button type="submit" onClick={() => dispatch(createPayment(values, currentConcert))}>Add To Cart </button>
+                    </Link>
                 </form>
                 )}
                 
