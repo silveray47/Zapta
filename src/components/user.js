@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const userDetails = createSlice({
     name:'user',
-    initialState: {obj: {fname:'', lname:'', email:'', phone:'', 
-                        address:'', password:'',  
-                        birthday:'', terms:''}},
+    initialState: {obj: {userName:'', fname:'', lname:'', 
+                        email:'', phone:'', address:'', 
+                        password:'', birthday:'', terms:''}},
 
     reducers:{
         createUser: (state, inputValues) => {

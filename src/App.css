@@ -9,9 +9,6 @@ Header{
   left:0;
 
 }
-Navbar{
-  position: sticky;
-}
 
 .navbar-header-container{
   overflow: hidden;

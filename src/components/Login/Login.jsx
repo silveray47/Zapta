@@ -4,6 +4,8 @@ import './login.css';
 import { obj, getUser } from '../user'
 import { useSelector, useDispatch } from "react-redux";
 import concertsList from '../../concerts.json'
+import { Link } from "react-router-dom";
+// import {loginUser,setActivUser,logoutUser, isLogedIn } from '../activUser'
 
 const Login = () => {
     const userObject = useSelector(obj)
@@ -18,6 +20,7 @@ const Login = () => {
         
     })
     const dispatch = useDispatch()
+    // const logedinIs = useSelector(isLogedIn)
 
     return (
         <div>
@@ -58,7 +61,11 @@ const Login = () => {
 
                     <br /> <br />
 
-                    <button type="submit" onClick={() => dispatch(getUser(values))}> Go! </button>
+                    <Link to='/'></Link><button type="submit" onClick={() => dispatch(getUser(values))}> Go! </button>
+                    <div>
+                        <span>not subscribed? join us now.</span>
+                        <Link to='/Signup' replace><button>SignUp</button> </Link>
+                    </div>
                     </fieldset>
                 </form>
                 )}

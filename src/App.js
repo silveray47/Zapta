@@ -21,7 +21,7 @@ function App() {
     <div className="App">
 
       <Header/>
-      <Navbar className='Navbar' isChanged={changedBad}/>
+      <Navbar isChanged={changedBad}/>
       <Main/>
       <Footer/>
     </div>

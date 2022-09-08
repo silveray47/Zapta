@@ -1,13 +1,20 @@
 import {Formik} from "formik"
 import * as Yup from "yup"
 import './signup.css';
-import { obj, createUser } from '../user'
 import { useSelector, useDispatch } from "react-redux";
+import { obj, createUser } from '../user'
+// import { loginUser , setActivUser , isLogedIn, activUserDetails } from '../activUser'
 
 const Signup = () => {
-   const userObject = useSelector(obj)
+    const userObject = useSelector(obj)
+    const handleSubmit = (values)=>{
+        dispatch(createUser(values))
+    }
     const schema = Yup.object().shape({
 
+        userName: Yup.string()
+        .required('Please enter a uniq username'),
+        
         fname: Yup.string()
         .required('Please enter your first name'),
 
@@ -46,7 +53,7 @@ const Signup = () => {
         <div>
              <h1>Come to Zappta !</h1> <br />
             
-            <Formik initialValues={{fname:'', lname:'', email:'', phone:'', 
+            <Formik initialValues={{userName:'', fname:'', lname:'', email:'', phone:'', 
                                     address:'', password:'', repeat_password:'', 
                                     birthday:'', terms:''}} 
             onSubmit={(values) => {alert ("your values: " + JSON.stringify(values))}}
@@ -57,6 +64,19 @@ const Signup = () => {
                 <form onSubmit={handleSubmit} noValidate>
                     <fieldset>
                     <legend>Register</legend>
+                        <label htmlFor="userName">User Name  </label>
+                        <input 
+                            type="text" 
+                            name="userName" 
+                            id="userName" 
+                            placeholder="user name" 
+                            onChange={handleChange}
+                            values={values.userName}
+                            onBlur={handleBlur}
+                        />
+                        <p>{errors.userName && touched.userName && errors.userName}</p>
+
+                        <br /> 
                         <label htmlFor="fname">First Name  </label>
                         <input 
                             type="text" 
@@ -183,7 +203,8 @@ const Signup = () => {
 
                         <br />
 
-                        <button type="submit" onClick={() => dispatch(createUser(values))}> Signup </button>
+                        {/* <button type="submit" onClick={() => dispatch(createUser(values))}> Signup </button> */}
+                        <button type="submit" onClick={() => handleSubmit(values)}> Signup </button>
                     </fieldset>
                 </form>
                 )}

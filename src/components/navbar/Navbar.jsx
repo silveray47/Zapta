@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import LoginSingupContainer from '../LoginSignupContainer/LoginSignupContainer';
 import './navbar.css'
 import smalLogo from '../../static/zapta.png'
@@ -12,22 +12,22 @@ export default function Navbar({isChanged}) {
       <nav >
         <ul>
           <li>
-            <Link to='/'>Home  </Link>
+            <NavLink to='/'>Home  </NavLink>
           </li>
           <li>
-            <Link to='/NewShows'> New-shows  </Link>
+            <NavLink to='/NewShows'> New-shows  </NavLink>
           </li>
           <li>
-            <Link to='/GiftCards'> Gift cards   </Link>
+            <NavLink to='/GiftCards'> Gift cards   </NavLink>
           </li>
           <li>
-            <Link to='/Gallery'> Gallery  </Link>
+            <NavLink to='/Gallery'> Gallery  </NavLink>
           </li>
           <li>
-            <Link to='/About'> About  </Link>
+            <NavLink to='/About'> About  </NavLink>
           </li>
           <li>
-            <Link to='/Contact'> Contact  </Link>
+            <NavLink to='/Contact'> Contact  </NavLink>
           </li>
         </ul>
       </nav>

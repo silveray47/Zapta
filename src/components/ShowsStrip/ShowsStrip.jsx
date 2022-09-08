@@ -19,11 +19,11 @@ function ShowsStrip() {
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 2
+          items: 5
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 1
+          items: 3
         }
       };
   return (
@@ -35,14 +35,13 @@ function ShowsStrip() {
             showDots={true}
             infinite={true}
             // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-            // autoPlaySpeed={1000}
-            // keyBoardControl={true}
+            autoPlay={true}
+            autoPlaySpeed={1000}
+            keyBoardControl={true}
             // customTransition="all .5"
             // transitionDuration={500}
-            // containerClass="carousel-container"
-            // removeArrowOnDeviceType={["tablet", "mobile"]}
-            // dotListClass="custom-dot-list-style"
-            // itemClass="carousel-item-padding-40-px"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            itemClass="carousel-item-padding-40-px"
             >
         <div><Card showId = '1' /></div>
         <div><Card showId = '2' /></div>

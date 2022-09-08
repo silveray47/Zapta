@@ -1,10 +1,12 @@
 import React from 'react'
 import './header.css';
 import LoginSignupContainer from '../LoginSignupContainer/LoginSignupContainer';
-import myLogo from '../../static/zapta.svg'
+// import myLogo from '../../static/zapta-ink.svg'
 import logo from '../../static/zapta.png'
 
+
 export default function Header() {
+  
   return (
     <div id='header'>
       
