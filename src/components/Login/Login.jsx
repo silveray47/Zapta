@@ -7,6 +7,7 @@ import concertsList from '../../concerts.json'
 
 const Login = () => {
     const userObject = useSelector(obj)
+    const dispatch = useDispatch()
     const schema = Yup.object().shape({
         username: Yup.string()
         .required('Please enter username or email address')
@@ -17,7 +18,7 @@ const Login = () => {
         .min(6, 'The Password should have at least 6 charecters')
         
     })
-    const dispatch = useDispatch()
+   
 
     return (
         <div>

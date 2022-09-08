@@ -1,3 +1,29 @@
 .payment-container{
     background-color:blueviolet;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
+h1, h2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+.purchase-conclusion img{
+    width: 100%;
+}
+
+
+.purchase-conclusion{
+ 
+ background-color: rgb(151, 113, 186);
+ text-align: center;
+}
+
+
+
+
+.payment-details-section{
+        text-align: justify;
+        margin-left: 20%;
+}
+
