@@ -12,7 +12,7 @@ import LocalOfferTwoToneIcon from '@mui/icons-material/LocalOfferTwoTone';
 import {Formik} from "formik"
 import * as Yup from "yup"
 import { useSelector, useDispatch } from "react-redux";
-import { paymentForward, createPayment } from '../paymentDetails'
+import { createPayment } from '../paymentDetails'
 import { number } from 'yup/lib/locale';
 
 
@@ -21,15 +21,15 @@ export default function Concert() {
   const currentConcert = concertsList[id-1]
   const [date, setDate] = useState(new Date())
   const concertDetails = currentConcert.details
-  console.log(concertDetails)
+  
 
- /*  const paymentObject = useSelector(paymentForward) */
+  /* const paymentObject = useSelector(paymentForward) */
   const dispatch = useDispatch()
     const schema = Yup.object().shape({
         date: Yup.string()
         .required('Please choose a valid date'),
         
-        amount: Yup.string()
+        amountOfTickets: Yup.string()
         .required('Please choose the amount of tickets')
 
         
@@ -83,7 +83,7 @@ export default function Concert() {
             <br />
 
             <div>
-            <Formik initialValues={{date:'...', amount:'0'}} 
+            <Formik initialValues={{concertId: currentConcert.id, date:'...', amountOfTickets:'0', pricePerUnit:currentConcert.price, totalPrice:''}} 
             onSubmit={(values) => {alert ("your values: " + JSON.stringify(values))}}
             validationSchema={schema}
             >
@@ -111,13 +111,13 @@ export default function Concert() {
                         </td>
 
                         <td>
-                        <label htmlFor="amount">How many?  </label>
+                        <label htmlFor="amountOfTickets">How many?  </label>
                         </td>
 
                         <td>
-                          <select name="amount" id="amount"
+                          <select name="amountOfTickets" id="amountOfTickets"
                                 onChange={handleChange}
-                                values={values.amount}
+                                values={values.amountOfTickets}
                                 onBlur={handleBlur}>
                               <option value="0" defaultValue={0}>0</option>
                               <option value="1">1</option>
@@ -137,11 +137,11 @@ export default function Concert() {
                         <td></td>
                         <td> <p>{errors.date && touched.date && errors.date}</p></td>
                         <td></td>
-                        <td><p>{errors.amount && touched.amount && errors.amount}</p></td>
+                        <td><p>{errors.amountOfTickets && touched.amountOfTickets && errors.amountOfTickets}</p></td>
 
                       </tr>
                       <tr >
-                        <td colSpan="4"> {values.amount} tickets to {currentConcert.artist} on {values.date}</td> 
+                        <td colSpan="4"> {values.amountOfTickets} tickets to {currentConcert.artist} on {values.date}</td> 
                       </tr>
                     </tbody>
                   </table>
@@ -149,7 +149,7 @@ export default function Concert() {
                     <br /> <br />
 
                     <Link to='/Payment'>
-                    <button type="submit" onClick={() => dispatch(createPayment(values, currentConcert))}>Add To Cart </button>
+                    <button type="submit" onClick={() => dispatch(createPayment(values))}>Add To Cart </button>
                     </Link>
                 </form>
                 )}

@@ -1,17 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
 export const paymentDetails = createSlice({
     name:'payment',
-    initialState: {paymentObject: {date:'', amountOfTickets:'', pricePerUnit:'', totalPrice:''}},
+    initialState: {paymentObject: {concertId:'', date:'', amountOfTickets:'', pricePerUnit:'', totalPrice:''}},
 
     reducers:{
-        createPayment: (state, inputValues, currentPayment) => {
+        createPayment: (state, inputValues) => {
             console.log(inputValues.payload)
-            console.log(currentPayment.payload)
             state.paymentObject = inputValues.payload
+            state.paymentObject.totalPrice = state.paymentObject.pricePerUnit * state.paymentObject.amountOfTickets
+            
         },
         getPayment: (state, inputValues) => {
-            console.log(inputValues.payload)
+       
             state.paymentObject = inputValues.payload
         }
     }
@@ -22,6 +24,6 @@ export const {
     getPayment
 } = paymentDetails.actions
 
-export const paymentForward = (state)=>state.payment.paymentObject
+export const currentPayment = (state)=>state.payment.paymentObject
 
 export default paymentDetails.reducer

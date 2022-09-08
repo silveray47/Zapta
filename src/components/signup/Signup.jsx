@@ -46,7 +46,7 @@ const Signup = () => {
         <div>
              <h1>Come to Zappta !</h1> <br />
             
-            <Formik initialValues={{fname:'', lname:'', email:'', phone:'', 
+            <Formik initialValues={{userName:'', fname:'', lname:'', email:'', phone:'', 
                                     address:'', password:'', repeat_password:'', 
                                     birthday:'', terms:''}} 
             onSubmit={(values) => {alert ("your values: " + JSON.stringify(values))}}
@@ -57,6 +57,19 @@ const Signup = () => {
                 <form onSubmit={handleSubmit} noValidate>
                     <fieldset>
                     <legend>Register</legend>
+                    <label htmlFor="userName">Username  </label>
+                        <input 
+                            type="text" 
+                            name="userName" 
+                            id="userName" 
+                            placeholder="username" 
+                            onChange={handleChange}
+                            values={values.userName}
+                            onBlur={handleBlur}
+                        />
+                        <p>{errors.userName && touched.userName && errors.userName}</p>
+
+                        <br /> 
                         <label htmlFor="fname">First Name  </label>
                         <input 
                             type="text" 

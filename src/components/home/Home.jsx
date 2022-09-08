@@ -8,8 +8,7 @@ import { Link } from 'react-router-dom'
 
 
 export default function Home() {
-  const [newShows, setNewShows] = useState(['nina','omerAdam','idanHaviv','yvalDayan'])
-  const [godMusic, setGodMusic] = useState(['tamir','machina','charchOfTheMind'])
+ 
   return (
     <div className='home'>
       <div>
