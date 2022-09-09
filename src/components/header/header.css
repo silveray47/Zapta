@@ -1,0 +1,45 @@
+#header{
+    margin: 0;
+    width: 100vw;
+    height: 55vh; 
+    position: relative; 
+    overflow:hidden;
+    
+    
+}
+#myLogo{
+    width: 60vw;
+    margin-top: 8vh;
+}
+#willSlap{
+    width:10vw;
+}
+#cards {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+
+#LoginSignupContainer{
+    top:0;
+    right: 10px;
+    position: absolute;
+    display: flex;
+
+}
+
+video {
+    object-fit: cover;
+    position: absolute;
+    width: 100vw;
+    top:0;
+    left: 0%;
+    z-index: -1;
+
+}
+
+#header-logo{
+    width: 40vw;
+    margin:0;
+
+}

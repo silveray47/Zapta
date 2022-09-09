@@ -1,0 +1,9 @@
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.filer{
+    padding-bottom: 200vh;
+}

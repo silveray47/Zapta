@@ -1,0 +1,76 @@
+.navbar{
+    margin: 0;
+    width: 100vw;
+    height: 8vh;  
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top:0;
+    background: #16213E; 
+    font-size: 1.5vw;
+    transition: 1s ease;
+    z-index: 999;
+
+}
+ 
+.navbar.activ{
+    background: #16213E;
+    display: flex;
+    align-items: center;
+    /* display: block; */
+    flex-direction: row;
+    justify-content: flex-end;
+    z-index: 999;
+    transition: 1s ease;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
+    height: 100%;
+    margin: 0;
+    transition: 1s ease;
+
+    
+  }
+.navbar.activ nav{
+
+  width: min-content;
+  right: 0;
+  transition: 1s ease;
+
+}
+.navbar li {
+  display: inline;
+  padding:2%;
+  transition: 1s ease;
+
+
+}
+.navbar a {
+  color: aliceblue;
+  text-decoration: none;
+}
+.navbar a:visited {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+
+
+.navbar.activ #loginSignupContainer{
+  position: initial;
+  transition: 1s ease;
+
+}
+
+#smalLogo{
+  position: absolute;
+  width: 30vh;
+  left: 0;
+  margin-left: 3vw;
+  transition: 1s ease;
+
+}

@@ -1,0 +1,16 @@
+
+.App {
+  text-align: center;
+}
+
+Header{
+  position:absolute;
+  top:0;
+  left:0;
+
+}
+
+.navbar-header-container{
+  overflow: hidden;
+}
+

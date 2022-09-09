@@ -1,0 +1,442 @@
+[
+  {
+    "id": 1,
+    "artist": "The Fish Snake",
+    "type": "band",
+    "image": "/images/hdn.jpeg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 2,
+    "artist": "Yuval Dayan",
+    "type": "singer",
+    "image": "/images/yd.jpeg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+   "id": 3,
+
+    "artist": "Monika Sex",
+    "type": "band",
+    "image": "/images/ms.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 4,
+    "artist": "Hava Alberstien",
+    "type": "singer",
+    "image": "/images/ha.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 5,
+    "artist": "Omer Adam",
+    "type": "singer",
+    "image": "/images/oa.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 6,
+    "artist": "Raviv Kaner",
+    "type": "singer",
+    "image": "/images/rk.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 7,
+    "artist": "Yehuda Poliker",
+    "type": "singer",
+    "image": "/images/yp.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 8,
+    "artist": "Natan Goshen",
+    "type": "singer",
+    "image": "/images/ng.jpeg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 9,
+    "artist": "Marina Maximilian Blumin",
+    "type": "singer",
+    "image": "/images/mmb.jpeg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 10,
+    "artist": "Evyatar Banay",
+    "type": "singer",
+    "image": "/images/eb.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 11,
+    "artist": "Dani Robas",
+    "type": "singer",
+    "image": "/images/dr.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 12,
+    "artist": "Keren Peles",
+    "type": "singer",
+    "image": "/images/kp.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 13,
+    "artist": "Rami Klienstein",
+    "type": "singer",
+    "image": "/images/rkl.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 14,
+    "artist": "The Prophecy Fools",
+    "type": "band",
+    "image": "/images/sh.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 15,
+    "artist": "Idan Haviv",
+    "type": "singer",
+    "image": "/images/ih.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 16,
+    "artist": "Itzik Kala",
+    "type": "singer",
+    "image": "/images/ik.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 17,
+    "artist": "Aviv Gefen",
+    "type": "singer",
+    "image": "/images/ag.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 18,
+    "artist": "Gidi Gov",
+    "type": "singer",
+    "image": "/images/gg.jpeg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 19,
+    "artist": "Amir Dadon",
+    "type": "singer",
+    "image": "/images/ad.jpeg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  },
+
+  {
+  "id": 20,
+    "artist": "Red Band",
+    "type": "band",
+    "image": "/images/rb.jpg",
+    "crowd_limit": 300,
+    "details":{ 
+        "door_opens_at": "19:00",
+        "real_hour": "20:00",
+        "club": "Zappta Afula",
+        "address": "Begin 40, Afula"
+    },
+    "dates":{
+        "date1": "27-09-22",
+        "date2": "28-09-22",
+        "date3": "29-09-22",
+        "date4": "30-09-22"
+    },
+    "price": 150,
+    "blur": "lorem ipsum"  
+  }
+]
