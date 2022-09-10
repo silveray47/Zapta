@@ -1,12 +1,14 @@
+import React from "react";
+import "./loginModal.css";
+import setOpenLoginModal from '../LoginSignupContainer/LoginSignupContainer'
 import {Formik} from "formik"
 import * as Yup from "yup"
-import './login.css';
 import { obj, getUser } from '../user'
 import { useSelector, useDispatch } from "react-redux";
 import concertsList from '../../concerts.json'
 
-const Login = () => {
-    const userObject = useSelector(obj)
+function LoginModal({ setOpenLoginModal }) {
+  const userObject = useSelector(obj)
     const dispatch = useDispatch()
     const schema = Yup.object().shape({
         username: Yup.string()
@@ -18,11 +20,32 @@ const Login = () => {
         .min(6, 'The Password should have at least 6 charecters')
         
     })
-   
 
-    return (
-        <div>
-            <Formik initialValues={{email:'', password:''}} 
+
+
+  return (
+    <div className="modalBackground">
+      <div className="modalContainer">
+        
+        {/* close button */}
+        <div className="titleCloseBtn">
+          <button
+            onClick={() => {
+              setOpenLoginModal(false);
+            }}
+          >
+            X
+          </button>
+        </div>
+
+            {/* title */}
+        <div className="title">
+          <h1>Login</h1>
+        </div>
+
+        {/* body */}
+        <div className="body">
+        <Formik initialValues={{email:'', password:''}} 
             onSubmit={(values) => {alert ("your values: " + JSON.stringify(values))}}
             validationSchema={schema}
             >
@@ -59,19 +82,23 @@ const Login = () => {
 
                     <br /> <br />
 
+                    {/* footer buttons */}
+                    <div className="footer">
+                      <button onClick={() => {setOpenLoginModal(false)}}id="cancelBtn">Cancel</button>
+                     
+                    
+
                     <button type="submit" onClick={() => dispatch(getUser(values))}> Go! </button>
+                    </div>
                     </fieldset>
                 </form>
                 )}
                 
             </Formik>
         </div>
-        
-    )
-
+      </div>
+    </div>
+  );
 }
 
-
-
-
-export default Login
+export default LoginModal;

@@ -1,52 +1,74 @@
+import React from "react";
+import "./signupModal.css";
+import setOpenSignupModal from '../LoginSignupContainer/LoginSignupContainer'
 import {Formik} from "formik"
 import * as Yup from "yup"
-import './signup.css';
 import { obj, createUser } from '../user'
 import { useSelector, useDispatch } from "react-redux";
+import concertsList from '../../concerts.json'
 
-const Signup = () => {
-   const userObject = useSelector(obj)
-    const schema = Yup.object().shape({
-
-        fname: Yup.string()
-        .required('Please enter your first name'),
-
-        lname: Yup.string()
-        .required('Please enter your last name'),
-
-        email: Yup.string()
-        .required('Please enter your email address')
-        .email('Email address should be valid'),
-
-        phone: Yup.string()
-        .required('Please enter your mobile number'),
-
-        address: Yup.string()
-        .required('Please enter your full address'),
-
-        password: Yup.string()
-        .required('Please enter password')
-        .min(6, 'The Password should have at least 6 charecters')
-        .max(16, 'The Password should have at maximum of 16 charecters'),
-
-        repeat_password: Yup.string()
-        .required('Please repeat the password'),
-
-        birthday: Yup.date()
-        .required('Please choose your birthday')
-        
-        
-       // terms: 
-        
-        
-    })
+function SignupModal({ setOpenSignupModal }) {
+    const userObject = useSelector(obj)
     const dispatch = useDispatch()
-    
-    return (
-        <div>
-             <h1>Come to Zappta !</h1> <br />
-            
-            <Formik initialValues={{userName:'', fname:'', lname:'', email:'', phone:'', 
+     const schema = Yup.object().shape({
+ 
+         fname: Yup.string()
+         .required('Please enter your first name'),
+ 
+         lname: Yup.string()
+         .required('Please enter your last name'),
+ 
+         email: Yup.string()
+         .required('Please enter your email address')
+         .email('Email address should be valid'),
+ 
+         phone: Yup.string()
+         .required('Please enter your mobile number'),
+ 
+         address: Yup.string()
+         .required('Please enter your full address'),
+ 
+         password: Yup.string()
+         .required('Please enter password')
+         .min(6, 'The Password should have at least 6 charecters')
+         .max(16, 'The Password should have at maximum of 16 charecters'),
+ 
+         repeat_password: Yup.string()
+         .required('Please repeat the password'),
+ 
+         birthday: Yup.date()
+         .required('Please choose your birthday')
+         
+         
+        // terms: 
+         
+         
+     })
+
+
+  return (
+    <div className="modalBackground">
+      <div className="modalContainer">
+        
+        {/* close button */}
+        <div className="titleCloseBtn">
+          <button
+            onClick={() => {
+                setOpenSignupModal(false);
+            }}
+          >
+            X
+          </button>
+        </div>
+
+            {/* title */}
+        <div className="title">
+          <h1>Signup</h1>
+        </div>
+
+        {/* body */}
+        <div className="body">
+        <Formik initialValues={{userName:'', fname:'', lname:'', email:'', phone:'', 
                                     address:'', password:'', repeat_password:'', 
                                     birthday:'', terms:''}} 
             onSubmit={(values) => {alert ("your values: " + JSON.stringify(values))}}
@@ -55,7 +77,7 @@ const Signup = () => {
 
                 {({handleSubmit, handleChange, values, errors, touched, handleBlur}) => (
                 <form onSubmit={handleSubmit} noValidate>
-                    <fieldset>
+                     <fieldset>
                     <legend>Register</legend>
                     <label htmlFor="userName">Username  </label>
                         <input 
@@ -196,16 +218,21 @@ const Signup = () => {
 
                         <br />
 
+                         {/* footer buttons */}
+                      <div className="footer">
+                      <button onClick={() => {setOpenSignupModal(false)}}id="cancelBtn">Cancel</button>
+
                         <button type="submit" onClick={() => dispatch(createUser(values))}> Signup </button>
+                        </div>
                     </fieldset>
                 </form>
                 )}
                 
             </Formik>
         </div>
-        
-    )
-
+      </div>
+    </div>
+  );
 }
 
-export default Signup
+export default SignupModal;

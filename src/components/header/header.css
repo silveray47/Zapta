@@ -11,11 +11,3 @@
     align-content: center;
     justify-content: space-around;
 }
-
-#LoginSignupContainer{
-    top:0;
-    right: 10px;
-    position: absolute;
-    display: flex;
-
-}
