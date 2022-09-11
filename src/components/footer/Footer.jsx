@@ -3,7 +3,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import myLogo from '../../static/zapta-ink.svg'
-import willSlap from '../../static/willSlap.svg'
+
 
 const Footer = () => {
 

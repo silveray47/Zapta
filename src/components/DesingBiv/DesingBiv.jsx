@@ -19,7 +19,7 @@ const  DesingBiv = ({tags, title, children}) => {
         textAlign:'left',
         paddingTop: '30px',
         paddingLeft: '30px',
-        borderRadius: '10px',
+        borderRadius: '10px 10px 0 0',
         backgroundColor:'#16213E'
     }
     
