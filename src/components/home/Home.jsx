@@ -3,6 +3,9 @@ import ShowsStrip from '../ShowsStrip/ShowsStrip'
 import './home.css'
 import 'react-multi-carousel/lib/styles.css';
 import DesingBiv from '../DesingBiv/DesingBiv'
+import concertsList from '../../concerts.json'
+import { Link } from 'react-router-dom'
+
 
 
 export default function Home() {
@@ -17,6 +20,30 @@ export default function Home() {
         <ShowsStrip />
       </DesingBiv>
       <div className='filer'></div>
+
+      <div>
+          <h1>Come to Zappta ! </h1> <br />
+          <div className="inner">
+            {
+              concertsList && concertsList.map( (concert,index) => {
+                return(
+                  <div key={index} className="box">
+
+
+                    
+                    <Link to={"/Concert/"+concert.id}><img src={concert.image}/></Link>
+                    <br />
+
+                    {concert.artist}
+                    
+                  </div>
+                )
+
+              })
+            }
+           </div>
+      </div>
+
 
     </div>
   )

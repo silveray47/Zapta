@@ -5,34 +5,18 @@ import {Formik} from "formik"
 import * as Yup from "yup"
 import { useSelector, useDispatch } from "react-redux";
 import { currentPayment } from '../paymentDetails'
-
-
+import { activUser } from '../usersSlice'
 
 export default function Payment() {
 
+ const currentUser = useSelector(activUser)
  const sumPayment = useSelector(currentPayment)
  const currentConcert = concertsList[sumPayment.concertId-1]
  const dispatch = useDispatch()
 
  const schema = Yup.object().shape({
  
-  fname: Yup.string()
-  .required('Please enter your first name'),
-
-  lname: Yup.string()
-  .required('Please enter your last name'),
-
-  email: Yup.string()
-  .required('Please enter your email address')
-  .email('Email address should be valid'),
-
-  phone: Yup.string()
-  .required('Please enter your mobile number'),
-
-  address: Yup.string()
-  .required('Please enter your full address'),
-
-  credit_card: Yup.string()
+  credit_card: Yup.number()
   .required('Please enter your credit card number'),
 
 
@@ -41,10 +25,11 @@ export default function Payment() {
 
 
   cvv: Yup.string()
-  .required('Please enter the 3 digits in the back of your card')
+  .required('Please enter the 3 digits in the back of your card'),
 
 
- // terms: 
+  terms: Yup.bool()
+  .oneOf([false], "you must obey!")
 
 })
   
@@ -58,92 +43,24 @@ export default function Payment() {
       <div className="purchase-conclusion">
           <img src={currentConcert.image}/>
           <br />
-          <p> {sumPayment.amountOfTickets} tickets to {currentConcert.artist} </p>
+          <p> {sumPayment.amountOfTickets} tickets to {currentConcert.artist}  | {sumPayment.date} </p>
           <p> Total: {sumPayment.totalPrice} $</p>
       </div>
 
       <div className="payment-details-section">
-         <Formik initialValues={{fname:'', lname:'', email:'', phone:'', address:'', 
-                                credit_card:'', exp_date:'', cvv:'', terms:''}} 
+         <Formik initialValues={{ credit_card:'', exp_date:'', cvv:'', terms:''}}
+                                 
             onSubmit={(values) => {alert ("your values: " + JSON.stringify(values))}}
             validationSchema={schema}
             >
                 {({handleSubmit, handleChange, values, errors, touched, handleBlur}) => (
                 <form onSubmit={handleSubmit} noValidate>
                     
-                        <label htmlFor="fname">First Name  </label>
-                        <input 
-                            type="text" 
-                            name="fname" 
-                            id="fname" 
-                            placeholder="First name" 
-                            onChange={handleChange}
-                            values={values.fname}
-                            onBlur={handleBlur}
-                        />
-                        <p>{errors.fname && touched.fname && errors.fname}</p>
-
-                        <br /> 
-
-                        <label htmlFor="lname">Last Name  </label>
-                        <input 
-                            type="text" 
-                            name="lname" 
-                            id="lname" 
-                            placeholder="Last name" 
-                            onChange={handleChange}
-                            values={values.lname}
-                            onBlur={handleBlur}
-                        />
-                        <p>{errors.lname && touched.lname && errors.lname}</p>
-
-                        <br />
-
-                        <label htmlFor="email">Email  </label>
-                        <input 
-                            type="email" 
-                            name="email" 
-                            id="email" 
-                            placeholder="Email" 
-                            onChange={handleChange}
-                            values={values.email}
-                            onBlur={handleBlur}
-                        />
-                        <p>{errors.email && touched.email && errors.email}</p>
-
-                        <br /> 
                         
-                        <label htmlFor="phone">Mobile Number  </label>
-                        <input 
-                            type="tel" 
-                            name="phone" 
-                            id="phone" 
-                            placeholder="Phone" 
-                            onChange={handleChange}
-                            values={values.phone}
-                            onBlur={handleBlur}
-                        />
-                        <p>{errors.phone && touched.phone && errors.phone}</p>
-
-                        <br /> 
-
-                        <label htmlFor="address">Address  </label>
-                        <input 
-                            type="text" 
-                            name="address" 
-                            id="address" 
-                            placeholder="Full address" 
-                            onChange={handleChange}
-                            values={values.address}
-                            onBlur={handleBlur}
-                        />
-                        <p>{errors.address && touched.address && errors.address}</p>
-
-                        <br /> 
                         {/* credit_card:'', exp_date:'', cvv */}
-                        <label htmlFor="credit_card">credit_card  </label>
+                        <label htmlFor="credit_card">Credit Card  </label>
                         <input 
-                            type="text" 
+                            type="number" 
                             name="addcredit_cardress" 
                             id="credit_card" 
                             placeholder="0000 0000 0000 0000" 
@@ -156,7 +73,7 @@ export default function Payment() {
                         
                         <br />
                           
-                        <label htmlFor="exp_date">exp_date  </label>
+                        <label htmlFor="exp_date">Expiry Date  </label>
                         <input 
                             type="text" 
                             name="exp_date" 
@@ -171,7 +88,7 @@ export default function Payment() {
                         
                         <br />
 
-                        <label htmlFor="cvv">cvv  </label>
+                        <label htmlFor="cvv">CVV </label>
                         <input 
                             type="text" 
                             name="cvv" 

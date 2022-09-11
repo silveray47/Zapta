@@ -9,7 +9,7 @@
     background: #16213E; 
     font-size: 1.5vw;
     transition: 1s ease;
-    z-index: 999;
+    z-index: 10;
 
 }
  
@@ -20,7 +20,7 @@
     /* display: block; */
     flex-direction: row;
     justify-content: flex-end;
-    z-index: 999;
+    z-index: 10;
     transition: 1s ease;
 }
 
