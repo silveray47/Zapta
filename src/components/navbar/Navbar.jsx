@@ -10,7 +10,8 @@ export default function Navbar({isChanged}) {
   console.log(isChanged);
   return (
     <div className={isChanged?'navbar activ':'navbar'}>
-       {isChanged && <img id='smalLogo' src={myLogo} alt="gdfgdfgdfg"/>}
+       {/* {isChanged && <img id='smalLogo' src={myLogo} alt="gdfgdfgdfg"/>} */}
+      <img id='smalLogo' src={myLogo} alt="gdfgdfgdfg"/>
       <nav >
         <ul>
           <li>

@@ -1,25 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Card from '../card/Card'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Ccard from '../ccard/Ccard';
+import './showsStrip.css'
+import { Link } from 'react-router-dom';
 
 
-
-function ShowsStrip() {
+function ShowsStrip({showsList}) {
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
           breakpoint: { max: 4000, min: 3000 },
-          items: 10
+          items: 7
         },
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
-          items: 7
+          items: 3
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 5
+          items: 3
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
@@ -34,25 +35,21 @@ function ShowsStrip() {
             draggable={false}
             showDots={true}
             infinite={true}
-            // autoPlay={this.props.deviceType !== "mobile" ? true : false}
             autoPlay={true}
             autoPlaySpeed={5000}
             keyBoardControl={true}
-            // customTransition="all .5"
-            // transitionDuration={500}
             removeArrowOnDeviceType={["tablet", "mobile"]}
-            itemClass="carousel-item-padding-40-px"
+            // itemClass="carousel-item-padding-40-px"
             >
-        <div><Card showId = '1' /></div>
-        <div><Card showId = '2' /></div>
-        <div><Card showId = '3' /></div>
-        <div><Card showId = '4' /></div>
-        <div><Card showId = '5' /></div>
-        <div><Card showId = '6' /></div>
-        <div><Card showId = '7' /></div>
-        <div><Card showId = '8' /></div>
-        <div><Card showId = '9' /></div>
-        <div><Card showId = '10' /></div>
+              {
+                showsList.map((concert,index) => {
+                  return(
+                    <Link to={"/Concert/"+concert}>
+                      <div><Ccard id={concert}/></div>
+                    </Link>
+                  )
+                })
+              }
         </Carousel>
     </div>
   )

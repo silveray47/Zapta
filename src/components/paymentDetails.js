@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const paymentDetails = createSlice({
     name:'payment',
-    initialState: {paymentObject: {concertId:'', date:'', amountOfTickets:'', pricePerUnit:'', totalPrice:''}},
+    initialState: {paymentObject: {concertId:'0', date:'', amountOfTickets:'', pricePerUnit:'', totalPrice:''}},
 
     reducers:{
         createPayment: (state, inputValues) => {
