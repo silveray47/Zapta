@@ -30,7 +30,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    margin: 20vmin;
+    margin: 2vmin;
     overflow: hidden;
     transform: skew(5deg);
 }
@@ -38,13 +38,13 @@
 .gallery_card{
     flex: 0.5;
     transition: all 1s ease-in-out;
-    height: 75vmin;
+    height: 80vmin;
     position: relative;
 }
 
 .gallery_card_head{
-    color: black;
-    background-color: #e94560bb;
+    color: rgb(0, 0, 0);
+    background-color: #e94560aa;
     padding: 0.5em;
     transform: rotate(-90deg);
     transform-origin: 0% 0%;
@@ -54,8 +54,8 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    font-size: 20px;
-    text-shadow: 0.5px 0.5px rgb(35, 7, 7);
+    font-size: 24px;
+    text-shadow: 2px 2px rgb(239, 176, 176);
     white-space: nowrap;
 }
 

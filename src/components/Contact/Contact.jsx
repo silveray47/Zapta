@@ -1,11 +1,12 @@
 import DesingBiv from "../DesingBiv/DesingBiv";
+import ContactForm from "./ContactForm";
 
 export default function Contact() {
 
     return (
         <DesingBiv  title='Contact'>
             <div>
-                <h1>CONTACT</h1>
+                <ContactForm />
             </div>
         </DesingBiv>
         

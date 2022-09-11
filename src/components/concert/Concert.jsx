@@ -13,7 +13,7 @@ import {Formik} from "formik"
 import * as Yup from "yup"
 import { useSelector, useDispatch } from "react-redux";
 import { createPayment } from '../paymentDetails'
-import Time from './Time.js'
+
 
 
 export default function Concert() {
