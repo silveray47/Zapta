@@ -13,15 +13,16 @@ import {Formik} from "formik"
 import * as Yup from "yup"
 import { useSelector, useDispatch } from "react-redux";
 import { createPayment } from '../paymentDetails'
-
+import Time from './Time.js'
 
 
 export default function Concert() {
+  
   const {id} = useParams() 
   const currentConcert = concertsList[id-1]
   const [date, setDate] = useState(new Date())
   const concertDetails = currentConcert.details
-  
+  const [showTime, setShowTime] = useState(false) 
 
   /* const paymentObject = useSelector(paymentForward) */
   const dispatch = useDispatch()
@@ -51,9 +52,10 @@ export default function Concert() {
        
           <div className="calendar-container">
             <h3>Upcoming Performances</h3>
-            <Calendar onChange={setDate} value={date}/>
+            <Calendar onChange={setDate} value={date} onClickDay={() => setShowTime(true)}/>
           </div>
 
+          
           <div className="concert-details">
             <h2 id='details-text'>Come Celebrate With {currentConcert.artist} !!!</h2>
             <br />
@@ -83,7 +85,7 @@ export default function Concert() {
             <br />
 
             <div>
-            <Formik initialValues={{concertId: currentConcert.id, date:'...', amountOfTickets:'0', pricePerUnit:currentConcert.price, totalPrice:''}} 
+            <Formik initialValues={{concertId: currentConcert.id, date:date.toDateString(), amountOfTickets:'0', pricePerUnit:currentConcert.price, totalPrice:''}} 
             onSubmit={(values) => {alert ("your values: " + JSON.stringify(values))}}
             validationSchema={schema}
             >
@@ -95,27 +97,11 @@ export default function Concert() {
                     <tbody>
                       <tr>
                         <td>
-                           <label htmlFor="date">When?  </label>
-                        </td>
-
-                        <td>
-                            <input 
-                            type="date" 
-                            name="date" 
-                            id="date" 
-                            placeholder="date" 
-                            onChange={handleChange}
-                            values={values.date}
-                            onBlur={handleBlur}
-                            />
-                        </td>
-
-                        <td>
                         <label htmlFor="amountOfTickets">How many?  </label>
                         </td>
 
                         <td>
-                          <select name="amountOfTickets" id="amountOfTickets"
+                        <select name="amountOfTickets" id="amountOfTickets"
                                 onChange={handleChange}
                                 values={values.amountOfTickets}
                                 onBlur={handleBlur}>
@@ -132,25 +118,50 @@ export default function Concert() {
                               <option value="10">10</option>
                           </select>   
                         </td>
+
                       </tr>
                       <tr>
-                        <td></td>
-                        <td> <p>{errors.date && touched.date && errors.date}</p></td>
-                        <td></td>
-                        <td><p>{errors.amountOfTickets && touched.amountOfTickets && errors.amountOfTickets}</p></td>
+                        
+                        <td colSpan="2"><p>{errors.amountOfTickets && touched.amountOfTickets && errors.amountOfTickets}</p></td>
 
                       </tr>
                       <tr >
-                        <td colSpan="4"> {values.amountOfTickets} tickets to {currentConcert.artist} on {values.date}</td> 
+                           
+                        <td colSpan="2">
+                        {/* date.length > 0 ? (
+                            <p>
+                              <span>Start:</span>
+                              {date[0].toDateString()}
+                              &nbsp;
+                              &nbsp;
+                              <span>End:</span>{date[1].toDateString()}
+                            </p>
+                                    ) : ( */
+                            <p>
+                                <span>Show is on </span>{date.toDateString()}. {values.amountOfTickets} tickets to {currentConcert.artist}.
+                            </p> 
+                            /* ) */
+                                    
+                            }
+                        {/*     <Time showTime={showTime} date={date}/>  */}
+        
+                        </td> 
+
+                      </tr>
+                      <tr>
+                        
+                        <td colSpan="2">
+                            
+                            <Link to='/Payment'>
+                            <button type="submit" onClick={() => dispatch(createPayment(values))}>Add To Cart </button>
+                            </Link>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 
                     <br /> <br />
 
-                    <Link to='/Payment'>
-                    <button type="submit" onClick={() => dispatch(createPayment(values))}>Add To Cart </button>
-                    </Link>
                 </form>
                 )}
                 
