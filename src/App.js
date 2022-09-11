@@ -12,14 +12,14 @@ function App() {
   const [changedBad , setChangedBad] = useState(false)
 
   const changeNavBar = () => {
-    window.scrollY >=246 ? setChangedBad(true) : setChangedBad(false); 
+    window.scrollY >=500 ? setChangedBad(true) : setChangedBad(false); 
   }
 
   window.addEventListener('scroll',changeNavBar)
 
-  // {changedBad? 'Navbar activ':'Navbar'}
   return (
     <div className="App">
+
       <Header/>
       <Navbar isChanged={changedBad}/>
       <Main/>

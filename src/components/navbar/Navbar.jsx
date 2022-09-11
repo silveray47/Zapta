@@ -1,31 +1,35 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import LoginSingupContainer from '../LoginSignupContainer/LoginSignupContainer';
 import './navbar.css'
+import smalLogo from '../../static/zapta.png'
+import myLogo from '../../static/zapta-ink.svg'
+
 
 export default function Navbar({isChanged}) {
   console.log(isChanged);
   return (
-    <div className={isChanged?'Navbar activ':'Navbar'}>
+    <div className={isChanged?'navbar activ':'navbar'}>
+       {isChanged && <img id='smalLogo' src={myLogo} alt="gdfgdfgdfg"/>}
       <nav >
         <ul>
           <li>
-            <Link to='/'>Home  </Link>
+            <NavLink style={({isActive}) => { return isActive?{color:'#E94560'}:{}}} to='/'>Home  </NavLink>
           </li>
           <li>
-            <Link to='/NewShows'> New-shows  </Link>
+            <NavLink style={({isActive}) => { return isActive?{color:'#E94560'}:{}}} to='/NewShows'> New-shows  </NavLink>
           </li>
           <li>
-            <Link to='/GiftCards'> Gift cards   </Link>
+            <NavLink style={({isActive}) => { return isActive?{color:'#E94560'}:{}}} to='/GiftCards'> Gift cards   </NavLink>
           </li>
           <li>
-            <Link to='/Gallery'> Gallery  </Link>
+            <NavLink style={({isActive}) => { return isActive?{color:'#E94560'}:{}}} to='/Gallery'> Gallery  </NavLink>
           </li>
           <li>
-            <Link to='/About'> About  </Link>
+            <NavLink  style={({isActive}) => { return isActive?{color:'#E94560'}:{}}} to='/About'> About  </NavLink>
           </li>
           <li>
-            <Link to='/Contact'> Contact  </Link>
+            <NavLink style={({isActive}) => { return isActive?{color:'#E94560'}:{}}} to='/Contact'> Contact  </NavLink>
           </li>
         </ul>
       </nav>
