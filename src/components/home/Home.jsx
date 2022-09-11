@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 
 
 
+
 export default function Home() {
  
   return (
@@ -18,10 +19,14 @@ export default function Home() {
               concertsList && concertsList.map( (concert,index) => {
                 return(
                   <div key={index} className="box">
+
+
+                    
                     <Link to={"/Concert/"+concert.id}><img src={concert.image}/></Link>
                     <br />
 
                     {concert.artist}
+                    
                   </div>
                 )
 

@@ -1,11 +1,10 @@
 import React from "react";
 import "./loginModal.css";
-import setOpenLoginModal from '../LoginSignupContainer/LoginSignupContainer'
 import {Formik} from "formik"
 import * as Yup from "yup"
 import { obj, getUser } from '../user'
 import { useSelector, useDispatch } from "react-redux";
-import concertsList from '../../concerts.json'
+
 
 function LoginModal({ setOpenLoginModal }) {
   const userObject = useSelector(obj)
