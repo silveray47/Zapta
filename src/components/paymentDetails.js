@@ -1,16 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { date } from "yup/lib/locale";
 
 
 export const paymentDetails = createSlice({
     name:'payment',
-    initialState: {paymentObject: {concertId:'', date:'', amountOfTickets:'', pricePerUnit:'', totalPrice:''}},
+    initialState: {paymentObject: {concertId:'0', date:'', amountOfTickets:'', pricePerUnit:'', totalPrice:''}},
 
     reducers:{
         createPayment: (state, inputValues) => {
             console.log(inputValues.payload)
             state.paymentObject = inputValues.payload
             state.paymentObject.totalPrice = state.paymentObject.pricePerUnit * state.paymentObject.amountOfTickets
-            
+             
         },
         getPayment: (state, inputValues) => {
        

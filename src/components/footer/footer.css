@@ -15,24 +15,12 @@
     border-radius: 50%;
  } */
 
-.MuiSvgIcon-root {
+/* .MuiSvgIcon-root {
    margin: 7px;
-}
+} */
 
 ul {
    list-style-type: none;
-}
-
-.logo {
-   float: left;
-   
-}
-
-#logo {
-   width: 150px;
-   margin-top: 20px;
-   margin-bottom: 20px;
-   margin-left: 60px;
 }
 
 .contact_us {
@@ -48,5 +36,12 @@ ul {
    float: left;
 }
 
+#myLogoFooter {
+   float: left;
+   width: 150px;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   margin-left: 60px;
+}
 
 

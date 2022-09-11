@@ -172,3 +172,7 @@ table tbody tr td{
     width:80%;
   }
   
+  #date {
+    visibility: visible;
+    max-height: fit-content;
+  }

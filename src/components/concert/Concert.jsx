@@ -23,6 +23,7 @@ export default function Concert() {
   const [date, setDate] = useState(new Date())
   const concertDetails = currentConcert.details
   const [showTime, setShowTime] = useState(false) 
+ 
 
   /* const paymentObject = useSelector(paymentForward) */
   const dispatch = useDispatch()
@@ -35,7 +36,11 @@ export default function Concert() {
 
         
     })
-    
+
+  const sendDate = (dataValues) =>{
+    dataValues.date = date.toDateString();
+    dispatch(createPayment(dataValues))
+  }
   
   return (
     <div className='concert' >
@@ -85,7 +90,7 @@ export default function Concert() {
             <br />
 
             <div>
-            <Formik initialValues={{concertId: currentConcert.id, date:date.toDateString(), amountOfTickets:'0', pricePerUnit:currentConcert.price, totalPrice:''}} 
+            <Formik initialValues={{concertId: currentConcert.id, date: '', amountOfTickets:'0', pricePerUnit:currentConcert.price, totalPrice:''}} 
             onSubmit={(values) => {alert ("your values: " + JSON.stringify(values))}}
             validationSchema={schema}
             >
@@ -121,6 +126,11 @@ export default function Concert() {
 
                       </tr>
                       <tr>
+                        <td>
+                        
+                        
+
+                        </td>
                         
                         <td colSpan="2"><p>{errors.amountOfTickets && touched.amountOfTickets && errors.amountOfTickets}</p></td>
 
@@ -153,7 +163,7 @@ export default function Concert() {
                         <td colSpan="2">
                             
                             <Link to='/Payment'>
-                            <button type="submit" onClick={() => dispatch(createPayment(values))}>Checkout </button>
+                               <button type="submit" onClick={() =>sendDate(values)}>Checkout </button>
                             </Link>
                         </td>
                       </tr>

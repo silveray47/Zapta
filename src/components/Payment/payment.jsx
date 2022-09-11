@@ -6,6 +6,7 @@ import * as Yup from "yup"
 import { useSelector, useDispatch } from "react-redux";
 import { currentPayment } from '../paymentDetails'
 import { activUser } from '../usersSlice'
+import CardForm from "../creditCard/Form";
 
 export default function Payment() {
 
@@ -34,107 +35,43 @@ export default function Payment() {
 })
   
   return (
+    
     <div className='payment-container'>
-      <h1>payment</h1>
-      <h2>give us your money</h2>
-
-      <br /> <br />
-
-      <div className="purchase-conclusion">
-          <img src={currentConcert.image}/>
+      
+      <div className="purchase-conclusion-text">
+        <h1>Order summary:</h1>
+        <dive className="line-wrapper">
+          <p> <b> {sumPayment.amountOfTickets}</b> tickets to <b>{currentConcert.artist}</b> </p>
+          <p> {sumPayment.date} <b>|</b> {currentConcert.details.door_opens_at}  <b>|</b>  {currentConcert.details.address} </p>
+          <p> Total: <b>{sumPayment.totalPrice} $</b ></p>
+          
+        </dive>
+        <br /><br />
+        <svg class="arrows">
+              <path class="a1" d="M0 0 L30 32 L60 0"></path>
+              <path class="a2" d="M0 20 L30 52 L60 20"></path>
+              <path class="a3" d="M0 40 L30 72 L60 40"></path>
+          </svg>
+          <p><b> If all good, please countinue for payment</b></p> 
           <br />
-          <p> {sumPayment.amountOfTickets} tickets to {currentConcert.artist}  | {sumPayment.date} </p>
-          <p> Total: {sumPayment.totalPrice} $</p>
+          <svg class="arrows">
+              <path class="a1" d="M0 0 L30 32 L60 0"></path>
+              <path class="a2" d="M0 20 L30 52 L60 20"></path>
+              <path class="a3" d="M0 40 L30 72 L60 40"></path>
+          </svg>
+          <br /><br />
       </div>
 
-      <div className="payment-details-section">
-         <Formik initialValues={{ credit_card:'', exp_date:'', cvv:'', terms:''}}
-                                 
-            onSubmit={(values) => {alert ("your values: " + JSON.stringify(values))}}
-            validationSchema={schema}
-            >
-                {({handleSubmit, handleChange, values, errors, touched, handleBlur}) => (
-                <form onSubmit={handleSubmit} noValidate>
-                    
-                        
-                        {/* credit_card:'', exp_date:'', cvv */}
-                        <label htmlFor="credit_card">Credit Card  </label>
-                        <input 
-                            type="number" 
-                            name="addcredit_cardress" 
-                            id="credit_card" 
-                            placeholder="0000 0000 0000 0000" 
-                            onChange={handleChange}
-                            values={values.credit_card}
-                            onBlur={handleBlur}
-                        />
-                        <p>{errors.credit_card && touched.credit_card && errors.credit_card}</p>
-
-                        
-                        <br />
-                          
-                        <label htmlFor="exp_date">Expiry Date  </label>
-                        <input 
-                            type="text" 
-                            name="exp_date" 
-                            id="exp_date" 
-                            placeholder="exp_date" 
-                            onChange={handleChange}
-                            values={values.exp_date}
-                            onBlur={handleBlur}
-                        />
-                        <p>{errors.exp_date && touched.exp_date && errors.exp_date}</p>
-
-                        
-                        <br />
-
-                        <label htmlFor="cvv">CVV </label>
-                        <input 
-                            type="text" 
-                            name="cvv" 
-                            id="cvv" 
-                            placeholder="cvv" 
-                            onChange={handleChange}
-                            values={values.cvv}
-                            onBlur={handleBlur}
-                        />
-                        <p>{errors.cvv && touched.cvv && errors.cvv}</p>
-                        
-                        <br />
-
-                        <input 
-                            type="checkbox" 
-                            name="terms" 
-                            id="terms" 
-                            onChange={handleChange}
-                            values={values.terms}
-                            onBlur={handleBlur}
-                        /> <label htmlFor="terms"> I agree to the <a href="http://www.thereisnothinghere.com/">terms and conditions</a>   </label>
-                        <p>{errors.terms && touched.terms && errors.terms}</p>
-
-                    <br /> <br />
-
-                    <button type="submit" /* onClick={() => dispatch(commitPurchase(values))} */> Go! </button>
-                    
-                </form>
-                )}
-                
-            </Formik>
+      <div className="purchase-conclusion-image">
+          <img src={currentConcert.image}/>
       </div>
+
+      <div className="payment-format">
+            <CardForm />
+      </div>
+
       
       
-
-              
-        
-      
-        
-               
-
-              
-         
-
-
-     
     </div>
   )
 }
