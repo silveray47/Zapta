@@ -69,7 +69,7 @@ function SignupModal({ setOpenSignupModal }) {
 
   return (
     <div className="modalBackground">
-      <DesingBiv title="Signup" size={['60%','auto']} >
+      <DesingBiv title="Signup" size={['50%','auto']} >
         <div className="modalContainer">
           {/* body */}
           <div className="body">
@@ -95,7 +95,7 @@ function SignupModal({ setOpenSignupModal }) {
                           />
                           <p>{errors.userName && touched.userName && errors.userName}</p>
 
-                          <br /> 
+                           
                           <label htmlFor="fname">First Name  </label>
                           <input 
                               type="text" 
@@ -108,7 +108,7 @@ function SignupModal({ setOpenSignupModal }) {
                           />
                           <p>{errors.fname && touched.fname && errors.fname}</p>
 
-                          <br /> 
+                           
 
                           <label htmlFor="lname">Last Name  </label>
                           <input 
@@ -122,7 +122,7 @@ function SignupModal({ setOpenSignupModal }) {
                           />
                           <p>{errors.lname && touched.lname && errors.lname}</p>
 
-                          <br />
+                          
                           <label htmlFor="password">Password  </label>
                           <input 
                               type="password" 
@@ -135,7 +135,7 @@ function SignupModal({ setOpenSignupModal }) {
                           />
                           <p>{errors.password && touched.password && errors.password}</p>
 
-                          <br /> 
+                           
 
                           <label htmlFor="repeat_password"> Repeat Password  </label>
                           <input 
@@ -149,7 +149,7 @@ function SignupModal({ setOpenSignupModal }) {
                           />
                           <p>{errors.repeat_password && touched.repeat_password && errors.repeat_password}</p>
 
-                          <br /> 
+                           
 
                     </div>  
                     <div className="item2">
@@ -165,7 +165,7 @@ function SignupModal({ setOpenSignupModal }) {
                           />
                           <p>{errors.email && touched.email && errors.email}</p>
 
-                          <br /> 
+                           
 
                           
                           
@@ -181,7 +181,7 @@ function SignupModal({ setOpenSignupModal }) {
                           />
                           <p>{errors.phone && touched.phone && errors.phone}</p>
 
-                          <br /> 
+                           
 
                           <label htmlFor="address">Address  </label>
                           <input 
@@ -195,7 +195,7 @@ function SignupModal({ setOpenSignupModal }) {
                           />
                           <p>{errors.address && touched.address && errors.address}</p>
 
-                          <br /> 
+                           
 
 
                           
@@ -210,7 +210,7 @@ function SignupModal({ setOpenSignupModal }) {
                           />
                           <p>{errors.birthday && touched.birthday && errors.birthday}</p>
 
-                          <br />
+                          
                     </div>
                     <div className="item3">
                           <input 
@@ -222,13 +222,13 @@ function SignupModal({ setOpenSignupModal }) {
                           <span> I agree to the <a href="http://www.thereisnothinghere.com/">terms and conditions</a>   </span>
                           <p>{errors.agreeToTerms && errors.agreeToTerms} </p>
 
-                          <br />
+                          
 
                           {/* footer buttons */}
                         <div className="footer">
-                        <button onClick={() => {setOpenSignupModal(false)}}id="cancelBtn">Cancel</button>
+                        <button className='login-signup-custom-btn login-signup-btn-3' onClick={() => {setOpenSignupModal(false)}}id="cancelBtn"><span>Cancel</span></button>
 
-                          <button type="submit"> Signup </button>
+                          <button className='login-signup-custom-btn login-signup-btn-3' type="submit"><span>Signup</span></button>
                           </div>
                     </div>
                   </form>

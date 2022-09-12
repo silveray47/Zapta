@@ -4,7 +4,7 @@ import './Gallery.css'
 export default function Gallery() {
 
     return (
-        <DesingBiv title='gallery'>
+        <DesingBiv size={["90%", "auto"]} title='Gallery'>
     <div className="gallery-wrapper" >
             <div id="main">
 

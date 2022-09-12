@@ -39,7 +39,7 @@ export default function Payment() {
     <div className='payment-container'>
       
       <div className="purchase-conclusion-text">
-        <h1>Order summary:</h1>
+        <h1>Order Summary:</h1>
         <dive className="line-wrapper">
           <p> <b> {sumPayment.amountOfTickets}</b> tickets to <b>{currentConcert.artist}</b> </p>
           <p> {sumPayment.date} <b>|</b> {currentConcert.details.door_opens_at}  <b>|</b>  {currentConcert.details.address} </p>

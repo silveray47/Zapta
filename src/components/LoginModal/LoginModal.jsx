@@ -86,8 +86,8 @@ function LoginModal({ setOpenLoginModal , setOpenSignupModal}) {
                           <br/> <br/>
                               {/* footer buttons */}
                           <div className="modal-footer">
-                            <button id="cancelBtn" onClick={() => {setOpenLoginModal(false)}}>Cancel</button>
-                            <button type="submit" > Login </button>
+                            <button className='login-signup-custom-btn login-signup-btn-3' id="cancelBtn" onClick={() => {setOpenLoginModal(false)}}><span>Cancel</span></button>
+                            <button className='login-signup-custom-btn login-signup-btn-3' type="submit" > <span>Login</span> </button>
                             <br/> <br/>
                             <span>Not registert? join us </span>
                             <a onClick={() =>  {SwitchToSignup()}}>Signup</a> 

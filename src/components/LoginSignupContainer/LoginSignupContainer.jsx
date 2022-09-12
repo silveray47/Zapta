@@ -29,15 +29,15 @@ export default function LoginSignupContainer() {
       {IslogedIn? 
         <div id="wellcom">
           <div >wellcom {userName}</div>
-          <button className='logout-button' onClick={() => {Logout()}}>Logout</button>
+          <button  className='login-signup-custom-btn login-signup-btn-3' onClick={() => {Logout()}}><span> Logout</span></button>
         </div>:
         <div id='loginSignupContainer'>
-          <button className='login-button' onClick={() => {setOpenLoginModal(true)}}>Login</button>
+          <button className='login-signup-custom-btn login-signup-btn-3'  onClick={() => {setOpenLoginModal(true)}}><span>Login</span></button>
           {openLoginModal && <LoginModal 
                               setOpenSignupModal={setOpenSignupModal} 
                               setOpenLoginModal={setOpenLoginModal} />}
     
-          <button className='signup-button'  onClick={() => {setOpenSignupModal(true)}}>Signup</button>
+          <button  className='login-signup-custom-btn login-signup-btn-3'  onClick={() => {setOpenSignupModal(true)}}><span>Signup</span></button>
           {openSignupModal && <SignupModal setOpenSignupModal={setOpenSignupModal} />}
 
           {/* <Link to="/Payment"><ShoppingCartOutlinedIcon color="secondary" 

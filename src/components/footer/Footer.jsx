@@ -18,7 +18,7 @@ const Footer = () => {
                             <li>Sunday-Thursday 08:00-18:00</li>
                             <li>Friday 08:00-12:00</li>
                         </ul>
-                    <li><span className="list-su-heading">Email:</span> <a href="http://" target="_blank"> Zappta@gmail.com</a></li>
+                    <li><span className="list-su-heading">Email:</span> <a href="http://www.thereisnothinghere.com/" target="_blank"> Zappta@gmail.com</a></li>
                     <li> The Snail 3, Garden-Heights</li>
                     <li><span className="list-su-heading">Phone:</span>  03-9876543</li>
                     
