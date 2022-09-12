@@ -7,9 +7,10 @@ import LoginModal from '../LoginModal/LoginModal';
 import SignupModal from '../SignupModal/SignupModal'
 import { isLogedIn, activUser } from '../usersSlice'
 import { useSelector } from "react-redux";
-
+import { currentPayment } from '../paymentDetails'
 
 export default function LoginSignupContainer() {
+  const sumPayment = useSelector(currentPayment)
 
   const[openLoginModal, setOpenLoginModal] = useState(false)
   const[openSignupModal, setOpenSignupModal] = useState(false)
@@ -21,18 +22,19 @@ export default function LoginSignupContainer() {
       {IslogedIn? 
         <div id="wellcom">
           <div >wellcom {userName}</div>
-          <Link to="/Payment"><ShoppingCartOutlinedIcon  
-            color="secondary" sx={{ fontSize: 40 }} className='cartIcon'/></Link>
+
         </div>:
         <div id='loginSignupContainer'>
           <button className='login-button' onClick={() => {setOpenLoginModal(true)}}>Login</button>
-          {openLoginModal && <LoginModal setOpenLoginModal={setOpenLoginModal} />}
+          {openLoginModal && <LoginModal 
+                              setOpenSignupModal={setOpenSignupModal} 
+                              setOpenLoginModal={setOpenLoginModal} />}
     
           <button className='signup-button'  onClick={() => {setOpenSignupModal(true)}}>Signup</button>
           {openSignupModal && <SignupModal setOpenSignupModal={setOpenSignupModal} />}
 
-          <Link to="/Payment"><ShoppingCartOutlinedIcon color="secondary" 
-                sx={{ fontSize: 40 }} className='cartIcon'/></Link>
+          {/* <Link to="/Payment"><ShoppingCartOutlinedIcon color="secondary" 
+                sx={{ fontSize: 40 }} className='cartIcon'/></Link> */}
         </div> 
       }
     </div>

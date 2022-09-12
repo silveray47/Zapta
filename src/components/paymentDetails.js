@@ -7,10 +7,9 @@ export const paymentDetails = createSlice({
 
     reducers:{
         createPayment: (state, inputValues) => {
-            console.log(inputValues.payload)
             state.paymentObject = inputValues.payload
             state.paymentObject.totalPrice = state.paymentObject.pricePerUnit * state.paymentObject.amountOfTickets
-            
+             
         },
         getPayment: (state, inputValues) => {
        

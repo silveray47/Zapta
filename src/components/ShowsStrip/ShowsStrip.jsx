@@ -1,5 +1,4 @@
 import React from 'react'
-import Card from '../card/Card'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Ccard from '../ccard/Ccard';
@@ -36,15 +35,14 @@ function ShowsStrip({showsList}) {
             showDots={true}
             infinite={true}
             autoPlay={true}
-            autoPlaySpeed={5000}
+            autoPlaySpeed={3000}
             keyBoardControl={true}
             removeArrowOnDeviceType={["tablet", "mobile"]}
-            // itemClass="carousel-item-padding-40-px"
             >
               {
                 showsList.map((concert,index) => {
                   return(
-                    <Link to={"/Concert/"+concert}>
+                    <Link key={index} to={"/Concert/"+concert}>
                       <div><Ccard id={concert}/></div>
                     </Link>
                   )

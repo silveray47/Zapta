@@ -1,58 +1,65 @@
 .modalBackground {
-  
-  position: fixed; /* Stay in place */
-  z-index: 20; /* Sit on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;  
+  z-index: 30;  
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;  
+  height: 100%; 
+  /* overflow: hidden;   */
+  background-color: rgba(255, 255, 255, 0.406);
+
 }
 
-/* Modal Content/Box */
-.modalContainer {
-  background-color: #fefefe6d;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+.item1 { grid-area: left; }
+.item2 { grid-area: right; }
+.item3 { 
+  grid-area: footer; 
+  text-align: center;
 }
 
-/* The Close Button */
-.titleCloseBtn {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.modal-form{
+  display: grid;
+  grid-template-areas:
+    'left right'
+    'footer footer';
+  gap: 10px;
 }
-
+ 
 form p {
-  color:red;
-  font-size: small;
+  color:tomato;
+  /* font-size: small; */
 }
+ 
+.modalContainer{
 
-fieldset {
-  background-color: rgba(245, 220, 189, 0.993);
-  width: fit-content;
-  height:fit-content;
+  color:white;
+  text-align: left;
   padding: 30px;
   padding-top:50px;
-  margin-left:auto;
-  margin-right:auto;
+  font-size: 1.3rem;
 }
-
-legend {
-  background-color: rgb(235, 235, 235);
-  color: rgb(10, 8, 8);
-  padding: 5px 10px;
-  margin-left:0;
-  margin-right:auto;
-  font-size: larger;
-  
-}
+ 
 
 input {
   margin: 5px;
+  font-size: 1.3rem;
+}
+
+#cancelBtn{
+  margin:10px;
+}
+
+.modal-footer a{
+  text-decoration:underline ;
+  color: white;
+  cursor: pointer;
+}
+
+.modalContainer a{
+  text-decoration:underline ;
+  color: white;
+  cursor: pointer;
 }
