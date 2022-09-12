@@ -13,7 +13,8 @@ import {Formik} from "formik"
 import * as Yup from "yup"
 import { useSelector, useDispatch } from "react-redux";
 import { createPayment } from '../paymentDetails'
-import Time from './Time.js'
+import DesingBiv from "../DesingBiv/DesingBiv";
+
 
 
 export default function Concert() {
@@ -23,21 +24,27 @@ export default function Concert() {
   const [date, setDate] = useState(new Date())
   const concertDetails = currentConcert.details
   const [showTime, setShowTime] = useState(false) 
+ 
 
+  /* const paymentObject = useSelector(paymentForward) */
   const dispatch = useDispatch()
     const schema = Yup.object().shape({
         date: Yup.string()
         .required('Please choose a valid date'),
         
         amountOfTickets: Yup.string()
-        .required('Please choose the amount of tickets') 
+        .required('Please choose the amount of tickets')
+
+        
     })
-    const sendDate = (dataValues) =>{
-      dataValues.date = date.toDateString();
-      dispatch(createPayment(dataValues))
-    }
+
+  const sendDate = (dataValues) =>{
+    dataValues.date = date.toDateString();
+    dispatch(createPayment(dataValues))
+  }
   
   return (
+   <DesingBiv title={currentConcert.artist}>
     <div className='concert' >
 
           
@@ -45,19 +52,20 @@ export default function Concert() {
           <img src={currentConcert.image} alt={currentConcert.artist} />
         </div>
 
-          <h1> {currentConcert.artist} </h1>
 
-          <br />
       <section className='calendar-details-wrapper'>
        
           <div className="calendar-container">
-            <h3>Upcoming Performances</h3>
+            <h2 className='concert-heading'>Upcoming Performances</h2>
+            <h5>Please choose the date of the concert</h5>
             <Calendar onChange={setDate} value={date} onClickDay={() => setShowTime(true)}/>
+            <p>* Due to lack of time, at the moment you can freely choose any date. {currentConcert.artist} will perform every night!  :) </p>
           </div>
 
           
           <div className="concert-details">
-            <h2 id='details-text'>Come Celebrate With {currentConcert.artist} !!!</h2>
+            <h2 className='concert-heading' id='details-text'>{currentConcert.artist} - Concert details</h2>
+            
             <br />
             <table>
               <tbody>
@@ -85,7 +93,7 @@ export default function Concert() {
             <br />
 
             <div>
-            <Formik initialValues={{concertId: currentConcert.id, date:date.toDateString(), amountOfTickets:'0', pricePerUnit:currentConcert.price, totalPrice:''}} 
+            <Formik initialValues={{concertId: currentConcert.id, date: '', amountOfTickets:'0', pricePerUnit:currentConcert.price, totalPrice:''}} 
             onSubmit={(values) => {alert ("your values: " + JSON.stringify(values))}}
             validationSchema={schema}
             >
@@ -96,15 +104,16 @@ export default function Concert() {
                   <table id="user-choises">
                     <tbody>
                       <tr>
-                        <td>
-                        <label htmlFor="amountOfTickets">How many?  </label>
+                        <td style={{textAlign:"center"}}>
+                        <label htmlFor="amountOfTickets" >How many?  </label>
                         </td>
 
                         <td>
                         <select name="amountOfTickets" id="amountOfTickets"
                                 onChange={handleChange}
                                 values={values.amountOfTickets}
-                                onBlur={handleBlur}>
+                                onBlur={handleBlur}
+                                style={{width:"90px"}}>
                               <option value="0" defaultValue={0}>0</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -121,6 +130,10 @@ export default function Concert() {
 
                       </tr>
                       <tr>
+                        <td>
+                        
+
+                        </td>
                         
                         <td colSpan="2"><p>{errors.amountOfTickets && touched.amountOfTickets && errors.amountOfTickets}</p></td>
 
@@ -128,18 +141,25 @@ export default function Concert() {
                       <tr >
                            
                         <td colSpan="2">
-                            <p>
-                                <span>Show is on </span>{date.toDateString()}. {values.amountOfTickets} tickets to {currentConcert.artist}.
-                            </p> 
+                      
+                            <p className='sumUpOrder'><span>Show is on </span>{date.toDateString()}. </p>
+                            <p className='sumUpOrder'>{values.amountOfTickets} tickets to {currentConcert.artist}.</p> 
+                             
+                            
+                            
+                               
+                            
+                           
                         </td> 
+
                       </tr>
                       <tr>
                         
                         <td colSpan="2">
                             
-                             
-                          <Link to='/Payment'>
-                               <button type="submit" onClick={() =>sendDate(values)}>Checkout </button>
+                            <Link to='/Payment'>
+                         
+                               <button type="submit" className='checkout-custom-btn checkout-btn-3'onClick={() =>sendDate(values)}><span>Checkout</span></button>
                             </Link>
                         </td>
                       </tr>
@@ -164,5 +184,6 @@ export default function Concert() {
 
 
     </div>
+    </DesingBiv>
   )
 }

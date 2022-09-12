@@ -32,11 +32,6 @@ export default function Home() {
       <DesingBiv size={['90%','auto']} title='R&B'>
         <ShowsStrip showsList={RandB}/>
       </DesingBiv>
-      <DesingBiv title='Dance/Electronic'>
-        <ShowsStrip size={['90%','auto']} showsList={Dance}/>
-      </DesingBiv>
-
-
 
     </div>
   )

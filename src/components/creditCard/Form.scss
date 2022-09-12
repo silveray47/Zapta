@@ -1,65 +1,66 @@
 .form {
+  display: flex;
+  margin: 50px auto 20px auto;
+  padding: 20px;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  width: 80%;
+  .column{
     display: flex;
-    margin: 50px auto 20px auto;
-    padding: 20px;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
-    width: 80%;
-    .column{
-      display: flex;
-      flex-direction: column
-    }
-    .row {
-    display: flex;
-    flex-flow:row wrap
-    }
-  
-    input, select {
-    margin: 1px 5px 10px 0;
-    padding: 10px 5px 10px 5px;
-    border: 1px solid #ccc;
-    transition: all 0.35s cubic-bezier(0.71, 0.03, 0.56, 0.85);
-      &:hover,
-      &:focus {
-        border-color: #3d9cff;
-        box-shadow: 1px 2px 3px 1px rgba(0, 212, 255, 0.4);
-      }
-    }
-  
-    /* change autocomplete background style */
-  
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-    transition: background-color 5000s ease-in-out 0s;
+    flex-direction: column
   }
-  
-    select {
-      width: 100px
-    }
-    .label {
-    font-size: 12px;
-    text-align: left;
-    }
-    button {
-      padding: 5px;
-      background-color: rgba(0, 212, 255, 1);
-      color:white;
-      border:2px solid rgba(0, 212, 255, 1);
-      &:hover,
-      &:focus {
-        border-color: #3d9cff;
-        box-shadow: 1px 2px 3px 1px rgba(0, 212, 255, 0.4);
-      }
-      &:disabled {
-        background: #ccc;
-        border-color: #ccc;
-        box-shadow: none
-      }
-    }
-   
+  .row {
+  display: flex;
+  flex-flow:row wrap
   }
-  
-  
+
+  input, select {
+  margin: 1px 5px 10px 0;
+  padding: 10px 5px 10px 5px;
+  border: 1px solid #ccc;
+  transition: all 0.35s cubic-bezier(0.71, 0.03, 0.56, 0.85);
+    &:hover,
+    &:focus {
+      border-color: #3d9cff;
+      box-shadow: 1px 2px 3px 1px rgba(0, 212, 255, 0.4);
+    }
+  }
+
+  /* change autocomplete background style */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+  select {
+    width: 100px
+  }
+  .label {
+  font-size: 12px;
+  text-align: left;
+  }
+  button {
+    padding: 5px;
+    /* background-color: rgba(0, 212, 255, 1); */
+    background: rgb(0,172,238);
+    background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    color:white;
+    border:2px solid rgba(0,172,238,1);
+    &:hover,
+    &:focus {
+      border-color: #3d9cff;
+      box-shadow: 1px 2px 3px 1px rgba(0, 212, 255, 0.4);
+    }
+    &:disabled {
+      background: #ccc;
+      border-color: #ccc;
+      box-shadow: none
+    }
+  }
+ 
+}
+
