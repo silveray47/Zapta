@@ -10,7 +10,6 @@ const calcY = (x, lx) => (x - lx - window.innerWidth / 2) / 20
 
 
 export default function Ccard({id}) {
-  console.log(id);
   const currentConcert = concertsList[id-1]
   const domTarget = useRef(null)
   const [{ x, y, rotateX, rotateY, rotateZ, zoom, scale }, api] = useSpring(
@@ -46,11 +45,11 @@ export default function Ccard({id}) {
 
 
   return (
-    <div className="container" >
+    <div className="poster-card-container" >
 
         <animated.div
         ref={domTarget}
-        className="card"
+        className="poster-card"
         style={{
           transform: 'perspective(600px)',
           x,

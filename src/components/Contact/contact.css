@@ -1,0 +1,12 @@
+.contact-container label {
+    color: rgb(238, 189, 189);
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+.contact-container h5 {
+    color: rgb(238, 189, 189);
+    font-size: 22px;
+    text-align: center;
+}

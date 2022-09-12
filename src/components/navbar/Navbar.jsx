@@ -7,19 +7,17 @@ import myLogo from '../../static/zapta-ink.svg'
 
 
 export default function Navbar({isChanged}) {
-  console.log(isChanged);
   return (
     <div className={isChanged?'navbar activ':'navbar'}>
-       {/* {isChanged && <img id='smalLogo' src={myLogo} alt="gdfgdfgdfg"/>} */}
-      <img id='smalLogo' src={myLogo} alt="gdfgdfgdfg"/>
+      <img id='smalLogo' src={myLogo} alt="myLogo"/>
       <nav >
         <ul>
           <li>
             <NavLink style={({isActive}) => { return isActive?{color:'#E94560'}:{}}} to='/'>Home  </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink style={({isActive}) => { return isActive?{color:'#E94560'}:{}}} to='/NewShows'> New-shows  </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink style={({isActive}) => { return isActive?{color:'#E94560'}:{}}} to='/GiftCards'> Gift cards   </NavLink>
           </li>

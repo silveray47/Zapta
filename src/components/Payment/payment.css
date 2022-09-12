@@ -1,29 +1,107 @@
+
+
+.arrows {
+    width: 60px;
+    height: 72px;
+    /* position: absolute; */
+    left: 50%;
+    margin-left: -30px;
+    bottom: 20px;
+  }
+  
+ .arrows path {stroke: #E94560;
+fill: transparent;
+stroke-width: 2px;  
+animation: arrow 2s infinite;
+-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+animation-delay:-1s;
+-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+animation-delay:-0.5s;
+-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 { 
+animation-delay:0s;
+-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
+
+.App {
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  margin: auto;
+}
+
 .payment-container{
-    background-color:blueviolet;
+    background-color:rgb(220, 216, 223);
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    display: grid;
+    z-index: 3;
 }
 h1, h2 {
     margin-left: auto;
     margin-right: auto;
 }
-.purchase-conclusion img{
+
+.purchase-conclusion-image{
+    background-color: rgb(212, 181, 143);
+    display: grid;
+    z-index: 4;
+}
+
+.purchase-conclusion-image img{
     width: 100%;
+    opacity: 0.5;
 }
 
 
-.purchase-conclusion{
- 
- background-color: rgb(151, 113, 186);
- text-align: center;
+.purchase-conclusion-text{
+    background-color: #bfd0de;
+    text-align: center;
+}
+
+.line-wrapper{
+    display: grid;
+    z-index: 5;
+    border: 3px dashed black;
+    width: fit-content;
+    margin: 0 auto 0 auto;
+    padding: 0 20px 0 20px;
 }
 
 
 
 
-.payment-details-section{
-        text-align: justify;
-        margin-left: 20%;
+.payment-format{
+    padding-top: 40px ;
 }
+
 

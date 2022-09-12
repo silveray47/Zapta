@@ -10,18 +10,34 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   const [newShows, setNewShows] = useState([1,2,3,4,5,6,7])
-  const [goodMusic, setGodMusic] = useState([11,12,13,14,15,16,17,18,19,10])
+  const [goodMusic, setGodMusic] = useState([11,12,13,14,18,19,10])
+  const [HaveMetal, setHaveMetal] = useState([15,2,6,8,19,20,16])
+  const [PopAndRock, setPopAndRock] = useState([1,9,10,15,13])
+  const [RandB, setRandB] = useState([20,18,16,13])
+  const [Dance, setDance] = useState([6,4,9,17,2,5,14])
   return (
     <div className='home'>
-      <DesingBiv title='New Shows'>
+      <DesingBiv size={['90%','auto']} title='New Shows' >
         <ShowsStrip showsList={newShows}/>
       </DesingBiv>
-      <DesingBiv title='Good Music'>
+      <DesingBiv size={['90%','auto']} title='Good Music'>
         <ShowsStrip showsList={goodMusic}/>
       </DesingBiv>
+      <DesingBiv size={['90%','auto']} title='Have Metal'>
+        <ShowsStrip showsList={HaveMetal}/>
+      </DesingBiv>
+      <DesingBiv size={['90%','auto']} title='Pop and Rock'>
+        <ShowsStrip showsList={PopAndRock}/>
+      </DesingBiv>
+      <DesingBiv size={['90%','auto']} title='R&B'>
+        <ShowsStrip showsList={RandB}/>
+      </DesingBiv>
+      <DesingBiv title='Dance/Electronic'>
+        <ShowsStrip size={['90%','auto']} showsList={Dance}/>
+      </DesingBiv>
 
-      
-      <div className='filer'></div>
+
+
     </div>
   )
 }

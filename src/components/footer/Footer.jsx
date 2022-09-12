@@ -1,15 +1,17 @@
 import './footer.css';
-import temp_logo from '../../static/temp_logo.png'
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import myLogo from '../../static/zapta-ink.svg'
+
 
 const Footer = () => {
 
     return(
         <div id='footer'>
-            <div className="logo">
-                 <img src={temp_logo} alt="logo" id="logo"/>
+            <div className="logo-footer">
+                 <img id='myLogoFooter' src={myLogo} alt="gdfgdfgdfg"/>
+                 
             </div>
             <div className="contact_us">
                 <ul>

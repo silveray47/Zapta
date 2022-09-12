@@ -24,18 +24,18 @@ export default function Concert() {
   const concertDetails = currentConcert.details
   const [showTime, setShowTime] = useState(false) 
 
-  /* const paymentObject = useSelector(paymentForward) */
   const dispatch = useDispatch()
     const schema = Yup.object().shape({
         date: Yup.string()
         .required('Please choose a valid date'),
         
         amountOfTickets: Yup.string()
-        .required('Please choose the amount of tickets')
-
-        
+        .required('Please choose the amount of tickets') 
     })
-    
+    const sendDate = (dataValues) =>{
+      dataValues.date = date.toDateString();
+      dispatch(createPayment(dataValues))
+    }
   
   return (
     <div className='concert' >
@@ -128,32 +128,18 @@ export default function Concert() {
                       <tr >
                            
                         <td colSpan="2">
-                        {/* date.length > 0 ? (
-                            <p>
-                              <span>Start:</span>
-                              {date[0].toDateString()}
-                              &nbsp;
-                              &nbsp;
-                              <span>End:</span>{date[1].toDateString()}
-                            </p>
-                                    ) : ( */
                             <p>
                                 <span>Show is on </span>{date.toDateString()}. {values.amountOfTickets} tickets to {currentConcert.artist}.
                             </p> 
-                            /* ) */
-                                    
-                            }
-                        {/*     <Time showTime={showTime} date={date}/>  */}
-        
                         </td> 
-
                       </tr>
                       <tr>
                         
                         <td colSpan="2">
                             
-                            <Link to='/Payment'>
-                            <button type="submit" onClick={() => dispatch(createPayment(values))}>Checkout </button>
+                             
+                          <Link to='/Payment'>
+                               <button type="submit" onClick={() =>sendDate(values)}>Checkout </button>
                             </Link>
                         </td>
                       </tr>
