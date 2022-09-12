@@ -45,9 +45,11 @@
     }
     button {
       padding: 5px;
-      background-color: rgba(0, 212, 255, 1);
+      /* background-color: rgba(0, 212, 255, 1); */
+      background: rgb(0,172,238);
+      background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
       color:white;
-      border:2px solid rgba(0, 212, 255, 1);
+      border:2px solid rgba(0,172,238,1);
       &:hover,
       &:focus {
         border-color: #3d9cff;

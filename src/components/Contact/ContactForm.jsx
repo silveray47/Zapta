@@ -39,8 +39,9 @@ export default () => (
             Homing pigeon
         </label><br /><br />
 
-        
-      <button type="submit">Send</button>
+          
+        <button class="custom-btn btn-3"><span>Read More</span></button>
+
     </Form>
   )}
   </Formik>

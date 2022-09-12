@@ -1,47 +1,57 @@
 #footer{
     margin: 0;
     width: 100vw;
-    height: 30vh; 
+    height: fit-content; 
     bottom: 0;
     position: relative; 
     background-color: #533483;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    
 }
-
-/* .social-icons{
-    width: 40px;
-    margin: 0 12px;
-    box-shadow: 0 0 20px 0 var(--grey-border);
-    cursor: pointer;
-    border-radius: 50%;
- } */
-
-/* .MuiSvgIcon-root {
-   margin: 7px;
-} */
 
 ul {
    list-style-type: none;
 }
 
 .contact_us {
-   margin-left: 20%;
-   margin-right: 20%;
-   float: left;
    font-size: smaller;
-   padding-top: 10px;
    text-align: left;
+   color: white;
+   margin-left: 75px;
 }
 
-.social_media {
-   float: left;
+
+.contact_us p{
+   color: black;
+   font-size: larger;
 }
+
+.social_media ul li a{
+ margin-right: 105px;
+}
+.social_media ul li {
+   margin-top: 10px;
+  }
 
 #myLogoFooter {
-   float: left;
-   width: 150px;
-   padding-top: 50px;
-   padding-bottom: 50px;
-   margin-left: 60px;
+   width: 350px;
+}
+
+#rock-smith {
+   height: 200px;
+   margin-top: 20PX;
+   margin-right: 30PX;
+}
+span.list-su-heading{
+   color: rgb(242, 200, 148);
+   font-weight: bold;
+}
+
+.contact_us a{
+   color: rgb(197, 197, 246);
 }
 
 
