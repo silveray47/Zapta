@@ -40,7 +40,7 @@ export default () => (
         </label><br /><br />
 
         
-      <button type="submit">Send</button>
+        <button type="submit" className="custom-btn btn-3"><span>Send</span></button>
     </Form>
   )}
   </Formik>
